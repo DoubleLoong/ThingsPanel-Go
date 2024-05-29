@@ -127,9 +127,9 @@ func (*TpOtaDeviceService) AddBathTpOtaDevice(tp_ota_device []models.TpOtaDevice
 }
 
 // 设备状态修改
-// 0-待推送 1-已推送 2-升级中 修改为已取消
-// 4-升级失败 修改为待推送
-// 3-升级成功 5-已取消 不修改
+// 1-待推送 2-已推送 3-升级中 修改为已取消
+// 5-升级失败 修改为待推送
+// 4-升级成功 6-已取消 不修改
 func (*TpOtaDeviceService) ModfiyUpdateDevice(tp_ota_modfiystatus valid.TpOtaDeviceIdValidate) error {
 	var devices []models.TpOtaDevice
 	db := psql.Mydb.Model(&models.TpOtaDevice{})
